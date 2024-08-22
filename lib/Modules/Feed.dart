@@ -23,9 +23,10 @@ class Feed{
     password=map["Password"].toString();
     ip=map["Ip"].toString();
     channels=(map["Channels"] as List<dynamic>).map((e)=>Channel.fromMap(e)).toList();
+    channels.forEach((e){
+      e.setChannelController(feedUrl());
+    });
     mainController=VideoController(getFeedPlayer());
-
-
 
   }
   String feedUrl()=>"rtsp://$userName:$password@$ip:$port";

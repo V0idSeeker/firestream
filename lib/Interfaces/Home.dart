@@ -47,6 +47,7 @@ class Home extends StatelessWidget {
                                                 alignment: Alignment.center,
                                                 height: MediaQuery.of(context).size.height / 2,
                                                 child: Text("No Live Feeds"),);
+                                            print(controller.streams[0].channels[0].channelController.toString());
 
                                             return SizedBox(
                                                 height: MediaQuery.of(context).size.height / 2,

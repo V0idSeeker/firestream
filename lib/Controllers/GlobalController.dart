@@ -25,6 +25,7 @@ class GlobalController extends GetxController {
   Future<void> buildStream() async {
 
    streams=await  databaseManager.getStreams(ownerId);
+
    print("streams are : $streams");
    update(["FeedsList"]);
 

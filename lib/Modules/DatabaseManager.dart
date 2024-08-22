@@ -134,7 +134,7 @@ class DatabaseManager{
   }
   Future removeStream(int streamId)async{
     await database;
-    //await _database?.rawDelete("delete from 'Channels' where FeedId=?",[streamId]);
+    await _database?.rawDelete("delete from 'Channels' where FeedId=?",[streamId]);
     await _database?.rawDelete("delete from 'Feeds' where FeedId=?",[streamId]);
   }
 

@@ -26,6 +26,9 @@ VideoController getChannelController(String feed){
   channelPlayer.open(Media("$feed?channel=$channelValue"));
   return channelController;
 }
+void setChannelController(String feed){
+  channelController=getChannelController(feed);
+}
 
 toMap(){
   return {
